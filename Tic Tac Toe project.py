@@ -1,7 +1,6 @@
 import tkinter as tk #a Python module for creating graphical user interfaces (GUIs).
 from tkinter import messagebox #submodule from Tkinter, which provides functions to display pop-up messages
 
-# Game Logic by Abdallah
 def check_win(board, player):
     win_combos = [(0,1,2), (3,4,5), (6,7,8), (0,3,6), (1,4,7), (2,5,8), (0,4,8), (2,4,6)]
     for a, b, c in win_combos:
@@ -20,7 +19,6 @@ def available_moves(board):
 # The enumerate function iterates over self.board and provides both the index (i) and the value (spot) of each element
 
 
-# Minimax Algorithm by Fadlia and assem
 def minimax(board, is_maximizing): #Defines the minimax function,
     if check_win(board, 'O'):      #Checks if the AI 'O' has won by calling check_win.
         return 1
@@ -58,7 +56,6 @@ def find_best_move(board): #optimal move for AI
             best_move = i #Sets best_move to the index of the current cell.
     return best_move #Returns the index of the best move for the AI.
 
-# GUI with Tkinter by khaled and Abdelrhman
 class TicTacToeGUI:
     def __init__(self):
         self.root = tk.Tk() #stores tkinter window
